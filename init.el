@@ -1,4 +1,4 @@
-;; emacs directory
+; emacs directory
 
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
@@ -27,16 +27,17 @@
 (el-get-bundle popup)
 (el-get-bundle auto-complete)
 (el-get-bundle migemo)
-(el-get-bundle helm)
-(el-get-bundle helm-ag)
-(el-get-bundle helm-descbinds)
-(el-get-bundle helm-migemo)
-(el-get-bundle helm-swoop)
-(el-get-bundle helm-c-yasnippet)
-(el-get-bundle helm-gtags)
-(el-get-bundle helm-ls-git)
-(el-get-bundle helm-ghq)
-(el-get-bundle helm-dash)
+(el-get-bundle anything)
+;; (el-get-bundle helm)
+;; (el-get-bundle helm-ag)
+;; (el-get-bundle helm-descbinds)
+;; (el-get-bundle helm-migemo)
+;; (el-get-bundle helm-swoop)
+;; (el-get-bundle helm-c-yasnippet)
+;; (el-get-bundle helm-gtags)
+;; (el-get-bundle helm-ls-git)
+;; (el-get-bundle helm-ghq)
+;; (el-get-bundle helm-dash)
 (el-get-bundle owdriver)
 (el-get-bundle switch-window)
 (el-get-bundle flycheck)
