@@ -36,13 +36,13 @@
 ;; 右から左に読む言語に対応させないことで描画高速化
 (setq-default bidi-display-reordering nil)
 
-;; メニューバー/ツールバー/スクロールバーを消す
+;; メニューバー/ツールバー/スクロールバー
 (menu-bar-mode -1)
 (tool-bar-mode -1)
-(scroll-bar-mode -1)
+(scroll-bar-mode t)
 
 ;; Highlight
-;(global-hl-line-mode t)
+;;(global-hl-line-mode t)
 (transient-mark-mode t)
 (show-paren-mode t)
 

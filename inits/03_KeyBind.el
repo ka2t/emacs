@@ -1,7 +1,7 @@
 ;; Global key bind
-(define-key global-map [?¥] [?\\])
+;;(define-key global-map [?¥] [?\\])
 (bind-key* "C-h" 'delete-backward-char)
-(bind-key*"M-h" 'backward-kill-word)
+(bind-key* "M-h" 'backward-kill-word)
 (bind-key* "M-p" 'backward-paragraph)
 (bind-key* "M-n" 'forward-paragraph)
 
