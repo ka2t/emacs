@@ -6,9 +6,9 @@
   ;; http://ergoemacs.org/emacs/emacs_hyper_super_keys.html
   ;;
   ;; left command
-  ;;(setq mac-command-modifier 'meta)
+  (setq mac-command-modifier 'meta)
   ;; left option
-  (setq mac-option-modifier 'alt)
+  ;;(setq mac-option-modifier 'alt)
   ;;
   ;; right command
   ;;(setq mac-right-command-modifier 'meta)
