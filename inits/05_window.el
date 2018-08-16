@@ -32,4 +32,11 @@
       (select-window first-win)
       (if this-win-2nd (other-window 1))))))
 
-(global-set-key (kbd "M-t") 'toggle-window-split)
+(bind-key* "M-t" 'toggle-window-split)
+
+;;; Frame Size
+(when (window-system)
+  (set-frame-size
+   (selected-frame)
+   120  ; 横幅
+   (/ (x-display-pixel-height) (frame-char-height))))

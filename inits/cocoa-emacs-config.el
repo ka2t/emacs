@@ -40,10 +40,3 @@
 
 (setq interprogram-cut-function 'paste-to-osx)
 (setq interprogram-paste-function 'copy-from-osx)
-
-;;; Frame Size
-(when (window-system)
-  (set-frame-size
-   (selected-frame)
-   120  ; 横幅
-   (- (/ (- (x-display-pixel-height) 15) (frame-char-height)) 1)))

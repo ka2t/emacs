@@ -29,7 +29,7 @@
 (el-get-bundle migemo)
 ;;(el-get-bundle anything)
 (el-get-bundle helm)
-;;(el-get-bundle helm-ag)
+(el-get-bundle helm-ag)
 (el-get-bundle helm-descbinds)
 (el-get-bundle helm-migemo)
 ;; (el-get-bundle helm-swoop)

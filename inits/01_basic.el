@@ -23,7 +23,7 @@
 
 ;; theme
 (load-theme 'misterioso t)
-(set-cursor-color 'orange)
+(set-cursor-color "orange")
 (set-face-foreground 'mode-line "MidnightBlue")
 (set-face-background 'mode-line "MediumPurple2")
 
