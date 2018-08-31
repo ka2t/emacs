@@ -27,6 +27,7 @@
 (el-get-bundle popup)
 (el-get-bundle auto-complete)
 (el-get-bundle migemo)
+(el-get-bundle visual-regexp-steroids)
 ;;(el-get-bundle anything)
 (el-get-bundle helm)
 (el-get-bundle helm-ag)

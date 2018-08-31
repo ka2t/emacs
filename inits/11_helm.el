@@ -22,11 +22,11 @@
   :bind (:map helm-map
               ("C-z" . helm-select-action)
               ("C-h" . delete-backward-char)
-              :map helm-find-files-map
-              ("C-h" . delete-backward-char)
-              ("TAB" . helm-execute-persistent-action)
-              :map helm-read-file-map
               ("TAB" . helm-execute-persistent-action)))
+;              :map helm-find-files-map
+;              ("C-h" . delete-backward-char)
+;              :map helm-read-file-map
+;              ("TAB" . helm-execute-persistent-action)))
 
   ;; 候補のディレクトリが一つしかない場合に、自動的に展開しない
   ;;  (setq helm-ff-auto-update-initial-value nil))

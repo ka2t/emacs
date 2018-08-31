@@ -1,4 +1,4 @@
-;;; winner
+;; winner
 (winner-mode 1)
 (global-set-key (kbd "C-z") 'winner-undo)
 

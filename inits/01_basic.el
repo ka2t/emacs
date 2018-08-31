@@ -21,9 +21,10 @@
 ;; wdired
 (bind-key "r" 'wdired-change-to-wdired-mode dired-mode-map)
 
-;; theme
+;; Face
 (load-theme 'misterioso t)
 (set-cursor-color "orange")
+(set-face-attribute 'region nil :foreground "black" :background "wheat")
 (set-face-foreground 'mode-line "MidnightBlue")
 (set-face-background 'mode-line "MediumPurple2")
 

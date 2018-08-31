@@ -1,14 +1,11 @@
 ;; Global key bind
-;;(define-key global-map [?¥] [?\\])
 (bind-key* "C-h" 'delete-backward-char)
 (bind-key* "M-h" 'backward-kill-word)
 (bind-key* "M-p" 'backward-paragraph)
 (bind-key* "M-n" 'forward-paragraph)
 
-;; Prevent incorrectly-input
-(global-unset-key (kbd "C-x C-z"))
-(global-unset-key (kbd "C-x C-c"))
-(defalias 'exit 'save-buffers-kill-emacs)
+(bind-key* "C-<down>" 'shrink-window)
+(bind-key* "C-<up>" 'enlarge-window)
 
-;; goto-map
-(define-key goto-map [?l] #'goto-line)
+(bind-key* "C-c r" 'vr/replace)
+(bind-key* "C-c q" 'vr/query-replace)
