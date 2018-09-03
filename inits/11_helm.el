@@ -11,7 +11,8 @@
   ("M-y" . helm-show-kill-ring)
   ("C-x i" . helm-imenu)
   ("C-x b" . helm-buffers-list)
-  ("C-x g" . helm-ag)
+  ("C-x g" . helm-ag)    ; change search directory with C-u prefix
+  ("C-x C-g" . helm-ag-project-root)
   ("M-'" . helm-ag-pop-stack)
   ("C-;" . helm-for-files)
   ("C-'" . helm-browse-project)
