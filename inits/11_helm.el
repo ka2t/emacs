@@ -2,6 +2,7 @@
   :config
   (use-package helm-descbinds)
   (use-package helm-gtags)
+  (setq helm-ag-use-temp-buffer t)
   
   :bind(
   ("M-x" . helm-M-x)
@@ -13,11 +14,9 @@
   ("C-x b" . helm-buffers-list)
   ("C-x g" . helm-ag)    ; change search directory with C-u prefix
   ("C-x C-g" . helm-ag-project-root)
-  ("M-'" . helm-ag-pop-stack)
-  ("C-;" . helm-for-files)
-  ("C-'" . helm-browse-project)
-  ("C-x r l" . helm-bookmarks)
-  ("M-." . gtags-find-tag-from-here)
+  ("C-x p" . helm-browse-project)
+  ("C-x B" . helm-bookmarks)
+  ("M-." . helm-gtags-find-tag)
   ("M-," . helm-gtags-pop-stack))
 
   :bind (:map helm-map
