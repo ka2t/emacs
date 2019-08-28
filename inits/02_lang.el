@@ -11,11 +11,11 @@
 (set-clipboard-coding-system 'utf-8) 
 
 ;; font
-;(add-to-list 'default-frame-alist '(font . "ricty-10"))
+(add-to-list 'default-frame-alist '(font . "ricty-10"))
 
-(let ((size (if (>= (x-display-pixel-width) 1900) 14 10)))
-  (condition-case err
-      (let ((myfont (format "ricty-%d" size)))
-    (set-frame-font myfont)
-    (add-to-list 'default-frame-alist `(font . ,myfont)))
-    (error (message "%s" err))))
+;; (let ((size (if (>= (x-display-pixel-width) 1900) 14 10)))
+;;   (condition-case err
+;;       (let ((myfont (format "ricty-%d" size)))
+;;     (set-frame-font myfont)
+;;     (add-to-list 'default-frame-alist `(font . ,myfont)))
+;;     (error (message "%s" err))))

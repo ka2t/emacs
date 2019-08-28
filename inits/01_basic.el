@@ -19,7 +19,7 @@
 ;; dired
 (put 'dired-find-alternate-file 'disabled nil)
 ;; wdired
-(bind-key "r" 'wdired-change-to-wdired-mode dired-mode-map)
+;;(bind-key "r" 'wdired-change-to-wdired-mode dired-mode-map)
 
 ;; Face
 (load-theme 'misterioso t)
