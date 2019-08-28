@@ -38,9 +38,8 @@
 (setq-default bidi-display-reordering nil)
 
 ;; メニューバー/ツールバー/スクロールバー
-(menu-bar-mode -1)
+(menu-bar-mode 0)
 (tool-bar-mode -1)
-(scroll-bar-mode t)
 
 ;; Highlight
 ;;(global-hl-line-mode t)

@@ -1,10 +1,12 @@
 ;; winner
 (winner-mode 1)
-(global-set-key (kbd "C-z") 'winner-undo)
+(bind-key* "C-x w f" 'winner-undo)
+(bind-key* "C-x w b" 'winner-redo)
 
 ;; switch-window
-(setq switch-window-shortcut-style 'qwerty)
-(bind-key* "C-t" 'switch-window)
+(bind-key* "C-t" 'other-window)
+;(setq switch-window-shortcut-style 'qwerty)
+;(bind-key* "C-t" 'switch-window)
 
 ;; toggle window split
 (defun toggle-window-split ()
