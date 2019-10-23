@@ -2,4 +2,3 @@
   :bind
   ("C-x m" . magit-status))
 
-

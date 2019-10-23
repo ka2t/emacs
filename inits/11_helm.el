@@ -1,4 +1,5 @@
 (use-package helm
+  :demand t
   :config
   (use-package helm-descbinds)
   (use-package helm-ag)
@@ -19,8 +20,6 @@
   ("C-;" . helm-for-files)
   ("C-'" . helm-browse-project)
   ("C-x r l" . helm-bookmarks)
-  ("M-." . gtags-find-tag-from-here)
-  ("M-," . helm-gtags-pop-stack)
   ("C-c m" . helm-org-rifle-org-directory)
 )
 
