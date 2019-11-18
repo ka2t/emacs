@@ -1,7 +1,7 @@
-(use-package flycheck
-  :config
-  (global-flycheck-mode)
-  )
+;; (use-package flycheck
+;;   :config
+;;   (global-flycheck-mode)
+;;   )
 
 (use-package lsp-mode
   ;;:custom

@@ -3,8 +3,9 @@
 (setq org-agenda-files '("~/Org"))
 
 ;; Org-captureを呼び出すキーシーケンス
-(define-key global-map "\C-cc" 'org-capture)
-(global-set-key "\C-ca" 'org-agenda)
+(bind-key* "C-c c" 'org-capture)
+(bind-key* "C-c a" 'org-agenda)
+(bind-key* "C-c m" 'helm-org-rifle-org-directory)
 
 ;; Org-captureのテンプレート（メニュー）の設定
 (setq org-capture-templates
