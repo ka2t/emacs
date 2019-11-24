@@ -22,11 +22,7 @@
 ;;(bind-key "r" 'wdired-change-to-wdired-mode dired-mode-map)
 
 ;; Face
-(load-theme 'misterioso t)
-(set-cursor-color "orange")
-(set-face-attribute 'region nil :foreground "black" :background "wheat")
-(set-face-foreground 'mode-line "MidnightBlue")
-(set-face-background 'mode-line "MediumPurple2")
+(use-package madhat2r-theme)
 
 ;; 起動画面を表示しない
 (setq inhibit-splash-screen t)
