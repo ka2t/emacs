@@ -1,4 +1,3 @@
-; ファイルの場所
 (setq org-directory "~/Org")
 (setq org-agenda-files '("~/Org"))
 
@@ -7,19 +6,23 @@
 (bind-key* "C-c a" 'org-agenda)
 (bind-key* "C-c m" 'helm-org-rifle-org-directory)
 
-;; Org-captureのテンプレート（メニュー）の設定
+;; Org-capture template
 (setq org-capture-templates
       '(("t" "TODO" entry
-         (file+headline "~/Org/todo.org" "予定")
-         "* TODO %?\n\n")
+         (file+headline "~/Org/todo.org" "TODO")
+         "* TODO %? %U \n")
         ("m" "Memo" entry
-         (file+headline "~/Org/memo.org" "メモ")
+         (file+headline "~/Org/memo.org" "MEMO")
          "* %? %U :memo: \n")))
 
+;; org-refile
+(setq org-refile-targets
+       (quote (("tech.org" :level . 1)
+               ("fishing.org" :level . 1)
+               ("misc.org" :level . 1))))
+
 ; メモをC-M-^一発で見るための設定
-; https://qiita.com/takaxp/items/0b717ad1d0488b74429d から拝借
 (defun show-org-buffer (file)
-  "Show an org-file FILE on the current buffer."
   (interactive)
   (if (get-buffer file)
       (let ((buffer (get-buffer file)))

@@ -1,3 +1,4 @@
+
 ;; exec-path
 (add-to-list 'exec-path "/opt/local/bin")
 (add-to-list 'exec-path "/usr/local/bin")
@@ -21,7 +22,7 @@
 ;; wdired
 ;;(bind-key "r" 'wdired-change-to-wdired-mode dired-mode-map)
 
-;; Face
+;; Theme
 (use-package madhat2r-theme)
 
 ;; 起動画面を表示しない
@@ -38,7 +39,7 @@
 (tool-bar-mode -1)
 
 ;; Highlight
-;;(global-hl-line-mode t)
+(global-hl-line-mode t)
 (transient-mark-mode t)
 (show-paren-mode t)
 
@@ -81,4 +82,32 @@
 
 ;; avoid "Symbolic link to SVN-controlled source file; follow link? (yes or no)"
 (setq vc-follow-symlinks t)
+
+;; visual-regexp
+(use-package visual-regexp
+  :bind
+  (:map search-map
+        ("r" . vr/replace)
+        ("q r" . vr/query-replace)))
+
+;; back-button
+(use-package back-button
+  :config
+  (back-button-mode 1)
+  :bind
+  ("C-c n" . back-button-global-forward)
+  ("C-c p" . back-button-global-backward))
+
+;; Other global key bind
+(bind-key* "C-h" 'delete-backward-char)
+(define-key key-translation-map [?\C-h] [?\C-?]) ;; minibufferでもC-hできるようにする
+(bind-key* "M-h" 'backward-kill-word)
+(bind-key* "M-p" 'backward-paragraph)
+(bind-key* "M-n" 'forward-paragraph)
+(bind-key* "C-<down>" 'shrink-window)
+(bind-key* "C-<up>" 'enlarge-window)
+(bind-key* "C-c e r" 'eval-region)
+(bind-key* "C-c e b" 'eval-buffer)
+(bind-keys :map goto-map
+           ("h" . help-for-help))
 
