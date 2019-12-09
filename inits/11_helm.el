@@ -4,6 +4,7 @@
   (use-package helm-descbinds)
   (use-package helm-ag)
   (use-package helm-ghq)
+  (use-package helm-ls-git)
   (use-package helm-org-rifle)
   (setq helm-ag-base-command "rg -S --vimgrep --no-heading")
   
