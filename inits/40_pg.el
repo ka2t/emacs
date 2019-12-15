@@ -1,7 +1,6 @@
 (use-package smart-jump
   :config
-  (smart-jump-setup-default-registers)
-  )
+  (smart-jump-setup-default-registers))
 
 (use-package cmake-mode)
 
@@ -21,23 +20,25 @@
    (lsp-inhibit-message t)
    (lsp-message-project-root-warning t)
    (create-lockfiles nil))
-  :init
-  (unbind-key "C-l")
   :bind
    ("M-," . xref-pop-marker-stack)
    ("M-." . xref-find-definitions)
    ("M-/" . xref-find-references)
-;   ("C-l t"    . lsp-goto-type-definition)
-;   ("C-l r"    . lsp-rename)
-;   ("C-l <f5>" . lsp-restart-workspace)
-;   ("C-l l"    . lsp-lens-mode))
   :hook
   (prog-major-mode . lsp-prog-major-mode-enable))
 
-;(use-package lsp-ui :commands lsp-ui-mode)
-(use-package company-lsp :commands company-lsp)
-(use-package helm-lsp :commands helm-lsp-workspace-symbol)
-;(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+(use-package company-lsp
+  :commands company-lsp
+  :custom
+  (company-lsp-cache-candidates nil)
+  (company-lsp-async t)
+  (company-lsp-enable-recompletion t)
+  (company-lsp-enable-snippet t)
+  :after
+  (:all lsp-mode lsp-ui company yasnippet)
+  :init
+  (push 'company-lsp company-backends))
+
 ;; optionally if you want to use debugger
 ;(use-package dap-mode)
 
@@ -49,8 +50,7 @@
   :hook ((c-mode c++-mode objc-mode) .
          (lambda () (require 'ccls) (lsp))))
 
- (use-package lsp-haskell
+(use-package lsp-haskell
   :config
-  (add-hook 'haskell-mode-hook #'lsp)
-  )
+  (add-hook 'haskell-mode-hook #'lsp))
 

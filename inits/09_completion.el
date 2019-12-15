@@ -8,10 +8,9 @@
         ("C-n" . company-select-next)
         ("C-p" . company-select-previous)
         ("C-s" . company-filter-candidates)
-        ("\t" . company-complete-selection)
-        )
+        ("TAB" . company-complete-selection))
   (:map company-search-map
         ("C-n" . company-search-next)
         ("C-p" . company-search-previous))
   :config
-  (global-company-mode))
+  (global-company-mode t))

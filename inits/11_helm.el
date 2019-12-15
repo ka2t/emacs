@@ -6,6 +6,7 @@
   (use-package helm-ghq)
   (use-package helm-ls-git)
   (use-package helm-org-rifle)
+  (use-package helm-lsp)
   (setq helm-ag-base-command "rg -S --vimgrep --no-heading")
   
   :bind
@@ -20,8 +21,9 @@
         ("i" . helm-imenu)
         ("o" . helm-occur)
         ("s" . helm-ag)
-        ("p" . helm-ag-project-root))
-
+        ("p" . helm-ag-project-root)
+        ("l" . helm-lsp-workspace-symbol))
+  
   (:map goto-map
         ("p" . helm-ghq)        
         ("f" . helm-browse-project)
