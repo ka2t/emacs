@@ -11,7 +11,6 @@
 
 (use-package lsp-mode
   :commands lsp
-  :hook (c-mode . lsp)
   :custom
   ((lsp-enable-snippet t)
    (lsp-enable-indentation nil)
@@ -20,10 +19,14 @@
    (lsp-inhibit-message t)
    (lsp-message-project-root-warning t)
    (create-lockfiles nil))
+  :config
+  (use-package helm-lsp)
   :bind
    ("M-," . xref-pop-marker-stack)
    ("M-." . xref-find-definitions)
    ("M-/" . xref-find-references)
+   (:map search-map
+         ("l" . helm-lsp-workspace-symbol))
   :hook
   (prog-major-mode . lsp-prog-major-mode-enable))
 
@@ -53,4 +56,3 @@
 (use-package lsp-haskell
   :config
   (add-hook 'haskell-mode-hook #'lsp))
-

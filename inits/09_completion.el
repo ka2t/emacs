@@ -3,7 +3,7 @@
   :init
   (setq company-selection-wrap-around t)
   :bind
-  ("C-M-i" . 'company-complete)
+  ("M-c" . 'company-complete)
   (:map company-active-map
         ("C-n" . company-select-next)
         ("C-p" . company-select-previous)

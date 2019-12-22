@@ -95,12 +95,14 @@
   :config
   (back-button-mode 1)
   :bind
-  ("C-c n" . back-button-global-forward)
-  ("C-c p" . back-button-global-backward))
+  ("C-c n" . back-button-local-forward)
+  ("C-c p" . back-button-local-backward)
+  ("C-c C-n" . back-button-global-forward)
+  ("C-c C-p" . back-button-global-backward))
 
 ;; Other global key bind
-(bind-key* "C-h" 'delete-backward-char)
 (define-key key-translation-map [?\C-h] [?\C-?]) ;; minibufferでもC-hできるようにする
+(bind-key* "C-h" 'delete-backward-char)
 (bind-key* "M-h" 'backward-kill-word)
 (bind-key* "M-p" 'backward-paragraph)
 (bind-key* "M-n" 'forward-paragraph)
@@ -108,6 +110,8 @@
 (bind-key* "C-<up>" 'enlarge-window)
 (bind-key* "C-c e r" 'eval-region)
 (bind-key* "C-c e b" 'eval-buffer)
+(bind-key* "C-c c" 'comment-region)
+(bind-key* "C-c u" 'uncomment-region)
 (bind-keys :map goto-map
-           ("h" . help-for-help))
-
+           ("h" . help-for-help)
+           ("l" . goto-line))

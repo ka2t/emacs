@@ -2,17 +2,17 @@
 (setq org-agenda-files '("~/Org"))
 
 ;; Org-captureを呼び出すキーシーケンス
-(bind-key* "C-c c" 'org-capture)
-(bind-key* "C-c a" 'org-agenda)
-(bind-key* "C-c m" 'helm-org-rifle-org-directory)
+(bind-key* "C-o c" 'org-capture)
+(bind-key* "C-o a" 'org-agenda)
+(bind-key* "C-o r" 'helm-org-rifle-org-directory)
 
 ;; Org-capture template
 (setq org-capture-templates
       '(("t" "TODO" entry
-         (file+headline "~/Org/todo.org" "TODO")
+         (file "~/Org/todo.org")
          "* TODO %? %U \n")
         ("m" "Memo" entry
-         (file+headline "~/Org/memo.org" "MEMO")
+         (file "~/Org/memo.org" "")
          "* %? %U :memo: \n")))
 
 ;; org-refile
