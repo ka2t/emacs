@@ -59,6 +59,9 @@
 ;; line number
 (global-linum-mode t)
 
+;; C-dでregionを削除
+(delete-selection-mode t)
+
 ;;; auto-save
 (setq backup-directory-alist `((".*" . ,(concat user-emacs-directory "backup/"))))
 (setq auto-save-file-name-transforms `((".*" ,(concat user-emacs-directory "auto-save/") t)))
@@ -102,6 +105,7 @@
 
 ;; Other global key bind
 (define-key key-translation-map [?\C-h] [?\C-?]) ;; minibufferでもC-hできるようにする
+(bind-key* "M-SPC" 'mark-word)
 (bind-key* "C-h" 'delete-backward-char)
 (bind-key* "M-h" 'backward-kill-word)
 (bind-key* "M-p" 'backward-paragraph)

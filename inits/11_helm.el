@@ -25,7 +25,7 @@
         ("r" . helm-ag-project-root))
   
   (:map goto-map
-        ("p" . helm-ghq)
+        ("g" . helm-ghq)
         ("f" . helm-browse-project)
         ("h" . help-for-help)
         ("b" . helm-bookmarks)
