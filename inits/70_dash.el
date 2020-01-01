@@ -1,15 +1,12 @@
 ;; dash
-(setq helm-dash-docsets-path (expand-file-name "~/docsets"))
-(setq helm-dash-min-lengh 0)
-(setq helm-dash-browser-func 'browse-url-firefox)
-
-(defun my-set-doctype-for-helm-dash ()
-  (setq-local helm-dash-docsets
-              (case major-mode
-                (c++-mode '("C++" "Boost" "OpenGL_4"))
-                (haskell-mode '("Haskell"))
-                (emacs-lisp-mode '("Emacs_Lisp")))))
-(dolist (hook (list 'c++-mode-hook 'haskell-mode-hook))
-  (add-hook hook 'my-set-doctype-for-helm-dash))
-
-(define-key goto-map [?d] #'helm-dash-at-point)
+(use-package helm-dash
+  :custom
+  (helm-dash-docsets-path (expand-file-name "~/.docsets"))
+  :init
+  (add-hook 'ruby-mode-hook '(lambda () (setq-local dash-docs-docsets '("Ruby"))))
+  (add-hook 'c++-mode-hook '(lambda () (setq-local dash-docs-docsets '("C++" "Boost"))))
+  (add-hook 'haskell-mode-hook '(lambda () (setq-local dash-docs-docsets '("Haskell"))))
+  (add-hook 'emacs-lisp-mode-hook '(lambda () (setq-local dash-docs-docsets '("Emacs_Lisp"))))
+  :bind
+  (:map goto-map
+        ("d" . helm-dash-at-point)))

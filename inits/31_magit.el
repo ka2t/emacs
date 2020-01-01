@@ -7,7 +7,3 @@
     (lambda() (interactive) (magit-mode-bury-buffer t)))
   :bind
   ("C-x m" . magit-status))
-
-
-
-
