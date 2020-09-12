@@ -103,6 +103,15 @@
   ("C-c C-n" . back-button-global-forward)
   ("C-c C-p" . back-button-global-backward))
 
+;; iflipb
+(use-package iflipb
+  :config
+  (setq iflipb-ignore-buffers (list "^[*]" "^magit" "]$"))
+  (setq iflipb-wrap-around t)
+  :bind
+  ("C-x n" . iflipb-next-buffer)
+  ("C-x p" . iflipb-previous-buffer))
+
 ;; Other global key bind
 (define-key key-translation-map [?\C-h] [?\C-?]) ;; minibufferでもC-hできるようにする
 (bind-key* "M-SPC" 'mark-word)

@@ -16,6 +16,7 @@
   ("C-x C-r" . helm-recentf)
   ("M-y" . helm-show-kill-ring)
   ("C-x b" . helm-buffers-list)
+  ("C-x r h" . helm-register)
 
   (:map search-map
         ("i" . helm-imenu)

@@ -12,7 +12,7 @@
          (file "~/Org/todo.org")
          "* TODO %? %U \n")
         ("m" "Memo" entry
-         (file "~/Org/memo.org" "")
+         (file "~/Org/memo.org")
          "* %? %U :memo: \n")))
 
 ;; org-refile

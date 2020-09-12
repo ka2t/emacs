@@ -28,8 +28,7 @@
    (:map search-map
          ("l" . helm-lsp-workspace-symbol))
   :hook
-  (ruby-mode . lsp))
-;;  (prog-major-mode . lsp-prog-major-mode-enable))
+  (prog-major-mode . lsp-prog-major-mode-enable))
 
 (use-package lsp-ui
   :commands lsp-ui-mode
@@ -83,3 +82,7 @@
 (use-package lsp-haskell
   :config
   (add-hook 'haskell-mode-hook #'lsp))
+
+(use-package python-mode
+  :config
+  (add-hook 'python-mode-hook #'lsp))

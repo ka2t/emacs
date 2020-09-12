@@ -1,3 +1,10 @@
+;; popwin
+(use-package popwin
+  :config
+  (popwin-mode 1)
+  ;;(setq display-buffer-function 'popwin:display-buffer)
+  (setq popwin:popup-window-position 'bottom))
+
 ;; winner
 (winner-mode 1)
 (bind-key* "C-x w f" 'winner-undo)
